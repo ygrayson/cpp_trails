@@ -1,15 +1,13 @@
 #include <iostream>
 
+//find n-th fibonacci number
 int fibonacci(int n) {
-    if (n == 0){
-        return 0;
-    }
-    else if (n == 1){
-        return 1;
-    }
-    else {
-        return fibonacci(n-1) + fibonacci(n-2);
-    }
+    //base case: n == 0
+    if (n == 0) { return 0; }
+    //base case: n == 1
+    else if (n == 1) { return 1; }
+    //recursive step
+    else { return fibonacci(n-1) + fibonacci(n-2); }
 }
 
 //Time Complexity: Exponential O()
