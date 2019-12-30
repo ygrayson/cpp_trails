@@ -1,9 +1,12 @@
 #include <iostream>
 
+//calculate factorial!
 int factorial(int n) {
-    if (n == 0 || n == 1) {
+    //base case: n == 0
+    if (n == 0) {
         return 1;
     }
+    //recursive case: n > 0
     else {
         return n * factorial(n-1);
     }
