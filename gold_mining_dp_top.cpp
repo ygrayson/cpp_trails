@@ -1,3 +1,7 @@
+//Dynammic Programming
+//Gold Mining problem
+//Top down
+
 #include <iostream>
 using namespace std;
 #define M 5
@@ -23,8 +27,8 @@ int optimal_amount(const int gold_mine[M][N], int position[]) {
     //recursive case
     else {
         int right_pos[] = {position[0], position[1]+1};
-        int right_up_pos[] = {max(0, position[0]-1), position[1]+1};
-        int right_down_pos[] = {min(M-1, position[0]+1), position[1]+1};
+        int right_down_pos[] = {max(0, position[0]-1), position[1]+1};
+        int right_up_pos[] = {min(M-1, position[0]+1), position[1]+1};
         int best_amount = max_int(optimal_amount(gold_mine, right_up_pos),
                                     optimal_amount(gold_mine, right_pos),
                                     optimal_amount(gold_mine, right_down_pos));
