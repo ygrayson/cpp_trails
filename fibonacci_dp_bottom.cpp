@@ -10,10 +10,8 @@
 long unsigned int fib_arr[MAX_LENGTH] = {0, 1}; //initialize to all 0
 
 long unsigned int fibonacci(int n) {
-    // base case: fib(0) = 0
-    if (n == 0) {
-        return 0;
-    }
+    // edge case handle: fib(0) = 0
+    if (n == 0) { return 0; }
     //already computed
     else if (fib_arr[n] != 0) {
         return fib_arr[n];

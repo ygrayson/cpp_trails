@@ -3,13 +3,9 @@
 //calculate factorial!
 int factorial(int n) {
     //base case: n == 0
-    if (n == 0) {
-        return 1;
-    }
+    if (n == 0) { return 1; }
     //recursive case: n > 0
-    else {
-        return n * factorial(n-1);
-    }
+    else { return n * factorial(n-1); }
 }
 
 //Time Complexity: Linear O(n)
